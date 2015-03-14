@@ -1,0 +1,12 @@
+script src="/assets/domain_actions/service"
+h1 =@domain.service.title
+input type="button" value="詳細編集" class="detail_params"
+div
+  = form_tag do
+    - @domain.service.default_attr.each do |k,v|
+      div class="attribute" style=v[:style]
+        div class="title "
+          label = v[:label]
+        div class="value"
+          input name=k type="text" value=v[:value]
+    input type="submit" text="実行"
