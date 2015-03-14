@@ -3,12 +3,8 @@ class Domain < ActiveRecord::Base
 
   def initialize( service )
     clazz_name = "domain_actions/#{service}".classify
-    if Settings.const_defined?(v) && klass.respond_to?(:default_attr)
       @service = clazz_name.safe_constantize.new
-    else
-      errors.add( :base, :not_exist_service )
-      @service = nil
-    end
+      errors.add( :base, :not_exist_service ) unless @service
   end
 
   def call( parameters )

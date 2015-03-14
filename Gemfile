@@ -45,3 +45,4 @@ end
 
 gem 'slim-rails'
 gem 'react-rails'
+gem 'bootstrap-sass'
