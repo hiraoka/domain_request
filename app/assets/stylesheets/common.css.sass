@@ -1,0 +1,47 @@
+$startColor: #808080
+$endColor:   #C0C0C0
+$menuHeight: 60px
+#menu
+  position: relative
+  z-index: 10000
+  height: $menuHeight
+  .menuBar
+    width: 100%
+    background: -moz-linear-gradient(top, $startColor, $endColor)
+    background: -webkit-gradient(linear, left top, left bottom, from($startColor), to($endColor))
+    height: $menuHeight
+    .menu
+      padding-left: 10px
+      padding-right: 10px
+      margin: 0px
+      width: 100px
+      float: left
+      text-align: center
+      background: -moz-linear-gradient(top, $startColor, $endColor)
+      background: -webkit-gradient(linear, left top, left bottom, from($startColor), to($endColor))
+      min-height: $menuHeight
+      &:hover
+        .submenu
+          display: block
+      .submenu
+        float: none
+        display: none
+        border-color: $endColor
+        border-width: 1px
+        border-bottom-style: solid
+      .topmenu
+        display: block
+#guide
+  z-index: 1000
+  float: right
+  width: 20%
+  height: 100%
+  background-color: #CCCCCC
+  .guide
+    list-style-type: none
+#detail
+  z-index: 100
+  position: absolute
+  float: left
+  margin: 70px
+  margin-top: 10px

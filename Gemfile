@@ -44,4 +44,4 @@ group :development, :test do
 end
 
 gem 'slim-rails'
-gem 'react-rails'
+gem 'react-rails', '~> 1.0.0.pre', github: 'reactjs/react-rails'
